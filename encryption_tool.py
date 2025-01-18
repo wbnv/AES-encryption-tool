@@ -70,18 +70,39 @@ def decrypt_message(encrypted_message, password):
 
 if __name__ == "__main__":
     try:
-        print("Starting the program...")
-        plaintext = input("Enter the message to encrypt: ")
-        password = input("Enter a password for encryption: ")
+        while True:
+            print("\nAES Encryption/Decryption Tool")
+            print("1. Encrypt a message")
+            print("2. Decrypt a message")
+            print("3. Exit")
+            choice = input("Choose an option (1, 2, or 3): ")
 
-        encrypted_message = encrypt_message(plaintext, password)
-        print(f"\nEncrypted Message: {encrypted_message}")
+            if choice == "1":
+                # Encryption mode
+                plaintext = input("Enter the message to encrypt: ")
+                password = input("Enter a password for encryption: ")
+                encrypted_message = encrypt_message(plaintext, password)
+                print(f"\nEncrypted Message: {encrypted_message}")
+            
+            elif choice == "2":
+                # Decryption mode
+                encrypted_message = input("Enter the encrypted message: ")
+                password = input("Enter the password for decryption: ")
+                decrypted_message = decrypt_message(encrypted_message, password)
+                print(f"\nDecrypted Message: {decrypted_message}")
+            
+            elif choice == "3":
+                # Exit the program
+                print("Goodbye!")
+                break
 
-        decrypted_message = decrypt_message(encrypted_message, password)
-        print(f"\nDecrypted Message: {decrypted_message}")
+            else:
+                print("Invalid option. Please choose 1, 2, or 3.")
 
     except Exception as e:
         print(f"An error occurred: {e}")
+
+
 
 
 def decrypt_message(encrypted_message, password):
