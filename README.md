@@ -74,10 +74,6 @@ This repository contains a simple Python-based tool for encrypting and decryptin
 
 ---
 
-## Example Use Case
-You can encourage users to post their encrypted messages (with passwords) in your comment section, allowing others to decrypt them for fun and learning. Ensure participants avoid using sensitive information.
-
----
 
 ## How to Contribute
 1. Fork the repository.
